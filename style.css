@@ -1,0 +1,395 @@
+body {
+    margin: 60px;
+    background-image: url(imagine_fundal.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+ }
+ 
+
+
+/*Header pagina principala: index.html*/
+ .logo-artist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    text-align: center; 
+ }   
+
+ .imagine-custom {
+    width: 700px;
+    height: auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+ }
+
+ .titlu-custom{
+    color: #000000;
+ }
+
+ 
+
+/*Header pagini aditionale: despre/portofoliu/colaborari/contact.html */
+ .logo-artist2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    text-align: center;
+ }
+
+ .imagine-custom2{
+    width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+ }
+
+ .titlu-custom2{
+    font-size: 40px;
+    margin: 0;
+ }
+
+
+
+/*Titlul paginii: MAKEUP ARTIST PROFESIONAL*/
+ h1 {
+    color: #521b72;
+    font-size: 60px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: 1em;
+    text-transform: none;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 46px;
+    letter-spacing: .05em;
+    line-height: 1.6em;
+    text-transform: uppercase;
+ }
+
+
+
+/*BARA NAVIGARE*/
+ .bara-navigatie {
+    background-color: #ffffff19;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+  }
+  
+ .linkuri-navigatie {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+ }
+  
+ .link-navigatie {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+ }
+  
+ .link-navigatie:hover {
+    color: #e85a71;
+ }
+
+
+
+ /*BUTON: "inapoi la pagina principala"*/
+ .container-buton {
+    text-align: left;
+  margin-top: 50px;
+ }
+  
+ .buton-inapoi {
+    padding: 5px 15px;
+    font-size: 18px;
+    background-color: #e2b8d19f;
+    color: #292626;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    display: inline-block;
+ }
+  
+ .buton-inapoi:hover {
+    background-color: #eb8cabbc;
+ }
+  
+.buton-inapoi::after {
+    font-size: 14px;
+    margin-left: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+ }
+  
+ .buton-inapoi:hover::after {
+    opacity: 1;
+ }
+
+
+
+/*Sageata interactiva pt captarea atentiei - index.html*/
+ .down-arrow {
+    position: absolute;
+    top: calc(100vh - 80px);
+    left: calc(50% - 14px);
+    width: 0;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 2px;
+    animation: jumpInfinite 1.5s infinite;
+ }
+
+ .down-arrow:after {
+    content: " ";
+    position: absolute;
+    top: 12px;
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    border-bottom: 4px solid;
+    border-right: 4px solid;
+    border-radius: 4px;
+    transform: rotateZ(45deg);
+  }
+  
+  @keyframes jumpInfinite {
+    0% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: 20px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+
+
+
+/*Imaginile din index.html si colaborari.html care sunt puse una langa alta*/
+ .imagini-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 10px;
+ }
+
+/*Articolele din index.html*/
+ .salon-imagine1:hover,
+ .salon-imagine2:hover,
+ .senorita1:hover,
+ .senorita2:hover,
+ .pepeneverde1:hover,
+ .pepeneverde2:hover,
+ .makeupartistic1:hover,
+ .makeupartistic2:hover{
+    opacity: 1
+ }
+ 
+
+
+/*PRIMUL ARTICOL DIN HOME PAGE = index.html*/
+ .articol-1 {
+    font-size: 24px; 
+    color: #ffffff;
+    background-color: #521b72; 
+    padding: 10px; 
+ }
+
+ .salon-imagine1,
+ .salon-imagine2 {
+    flex: 1; 
+    max-width: 500px; 
+    height: 500px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+ }
+
+ 
+
+/*AL DOILEA ARTICOL DIN HOME PAGE = index.html*/
+ .articol-2 {
+    font-size: 24px; 
+    color: #ffffff;
+    background-color: #e40b0bd5; 
+    padding: 10px; 
+ }
+
+ .senorita1,
+ .senorita2 {
+    flex: 1; 
+    max-width: 500px; 
+    height: 500px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+ }
+
+
+
+/*AL TREILEA ARTICOL DIN HOME PAGE = index.html*/
+ .articol-3 {
+    font-size: 24px; 
+    color: #ffffff;
+    background-color: #f14fa8; 
+    padding: 10px; 
+ }
+
+ .pepeneverde1,
+ .pepeneverde2 {
+    flex: 1; 
+    max-width: 500px; 
+    height: 500px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+ }
+
+
+
+/*AL 4-LEA ARTICOL DIN HOME PAGE = index.html*/
+ .articol-4 {
+    font-size: 24px; 
+    color: #ffffff;
+    background-color: #822cf3; 
+    padding: 10px; 
+ }
+
+ .makeupartistic1,
+ .makeupartistic2 {
+    flex: 1; 
+    max-width: 600px; 
+    height: 700px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+ }
+
+
+
+/* Formatare imagine si text in despre.html */
+ .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+ }
+
+ .left-side {
+    flex: 1;
+    padding: 20px;
+ }
+
+ .right-side {
+    flex: 1;
+    padding: 20px;
+ }
+
+ .imagine-despre {
+    max-width: 100%;
+    height: auto;
+ }
+
+ h2 {
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 0em;
+    line-height: 1em;
+    text-transform: none;
+    font-family: futura-pt;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 46px;
+    letter-spacing: .05em;
+    line-height: 1.6em;
+    text-transform: uppercase;
+ }
+
+ p {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    letter-spacing: 0em;
+    line-height: 1.6em;
+    font-family: futura-pt;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    letter-spacing: .04em;
+    line-height: 1.8em;
+    text-transform: none;
+    color: rgba(64,64,64,.6);
+ }
+
+
+/*GRILA IMAGINI - portofoliu.html */
+ .imagini-grila {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+ }
+
+ .grila-imagini {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+
+
+/*CONTACT*/
+/* Stilurile pentru iconițe și alinierea lor */
+ .iconite-sociale {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+ }
+
+ .social-icons a {
+    display: inline-block;
+    font-size: 30px;
+    color: #f74848ad; 
+    text-decoration: none;
+ }
+
+ .social-icons a:hover {
+    color: #5bdbd1; /* Culoarea la hover */
+ }
+
+  
+
+/* Spatiu suplimentar in site= inlocuitor <br><br><br>*/
+ .spacer {
+    margin-bottom: 210px; /* Adaugă spațiu de 20px între elemente */
+ }
+
+
+
+/*Caracteristicile subsolului*/
+ footer {
+    background-color: #fceded0e;
+    text-align: center;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+ }
+  
+  
+   
