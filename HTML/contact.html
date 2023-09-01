@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 
     <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="../CSS/style.css">
+     <link rel="icon" type="image/x-icon" href="../Imagini/makeup_brushes.avif">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
      <title>Cursuri</title>
     </head>
@@ -12,24 +13,24 @@
 
     <body>
         <header class="logo-artist2">
-             <div class="spacer"></div>
-            
-            <a href="index.html">
-                <img src="Bianca_Pojar_titlu.png" 
+            <div class="spacer"></div>
+                
+            <a href="../index.html">
+                <img src="../Imagini/Bianca_Pojar_titlu.png" 
                      alt="Logo artist" 
                      class="imagine-custom2"                    
                      title="Apasa aici pentru a reveni la pagina principala!">
             </a> 
-    
+        
             <h1 class="titlu-custom2">MAKEUP ARTIST PROFESIONAL</h1>
-    
+        
             <div class="bara-navigatie">
                 <ul class="linkuri-navigatie">
-                     <li><a href="index.html" class="link-navigatie">Acasă</a></li>
-                     <li><a href="despre.html" class="link-navigatie">Despre</a></li>
-                     <li><a href="portofoliu.html" class="link-navigatie">Portofoliu</a></li>
-                     <li><a href="colaborari.html" class="link-navigatie">Colaborari</a></li>
-                     <li><a href="contact.html" class="link-navigatie">Contact</a></li>
+                    <li><a href="../index.html" class="link-navigatie">Acasă</a></li>
+                    <li><a href="../HTML/despre.html" class="link-navigatie">Despre</a></li>
+                    <li><a href="../HTML/portofoliu.html" class="link-navigatie">Portofoliu</a></li>
+                    <li><a href="../HTML/colaborari.html" class="link-navigatie">Colaborari</a></li>
+                    <li><a href="../HTML/contact.html" class="link-navigatie">Contact</a></li>
                 </ul>
             </div>
             <br><br><br><br>
@@ -38,7 +39,7 @@
         <div class="spacer"></div>
  
         <div class="container-buton">
-             <a href="index.html" id="butonInapoi" class="buton-inapoi">Înapoi la pagina principală</a>
+             <a href="../index.html" id="buttonBack" class="buton-inapoi">Înapoi la pagina principală</a>
         </div>
  
         <hr>
@@ -80,7 +81,26 @@
             A voastra Bianca! 💖🎨
         </p>
 
-        <br>
+        <br><br>
+
+        
+        <button id="popupButton">Contactează artistul</button>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" id="close">&times;</span>
+                <h2>Contactează artistul</h2>
+                <form id="contactForm">
+                    <input type="text" id="nume" placeholder="Nume" required>
+                    <input type="text" id="prenume" placeholder="Prenume" required>
+                    <input type="tel" id="telefon" placeholder="Număr de telefon" required>
+                    <input type="email" id="email" placeholder="Adresă de email" required>
+                    <textarea id="mesaj" placeholder="Mesaj" required></textarea>
+                    <input type="submit" value="Trimite">
+                </form>
+            </div>
+        </div>
+
+        <br> <br><br><br><br>
         
         <div class="scroll-to-top">
             <a  href="#"     
@@ -89,9 +109,11 @@
             </a>
         </div>
 
+       
+
         <footer>
              <p>&copy; Pojar Bianca 09.09.2023</p>
         </footer>
-         <script src="index.js"></script>
+         <script src="../JAVASCRIPT/index.js"></script>
     </body>
 </html>
