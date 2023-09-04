@@ -26,13 +26,17 @@ class ButtonController {
 // am selectat zona pana la care mi-am dorit sa se faca scroll, de aceea se regaseste "sectiune-destinatie"
 
 document.addEventListener("DOMContentLoaded", function () {
-  const scrollButton = document.getElementById("scrollButton");
-  const sectiuneDestinatie = document.getElementById("sectiune-destinatie");
+    const scrollButton = document.getElementById("scrollButton");
+    const sectiuneDestinatie = document.getElementById("sectiune-destinatie");
 
-  scrollButton.addEventListener("click", function () {
-    sectiuneDestinatie.scrollIntoView({ behavior: "smooth" });
-  });
+    if (scrollButton && sectiuneDestinatie) {
+        scrollButton.addEventListener("click", function () {
+            sectiuneDestinatie.scrollIntoView({ behavior: "smooth" });
+        });
+    }
 });
+
+  
 
 
 // BUTON PENTRU REVENIRE IN PARTEA DE SUS A PAGINII 
@@ -49,26 +53,25 @@ class ScrollToTopController {
     });
   }
 }
-
-
-/* CONTAINER DE CONTACT din contact.html*/
-
-
 class PopUp {
   constructor() {
       this.popup = document.getElementById("popup");
       this.popupButton = document.getElementById("popupButton");
       this.closeButton = document.getElementById("close");
 
-      this.popupButton.addEventListener("click", () => this.togglePopUp());
-      this.closeButton.addEventListener("click", () => this.togglePopUp());
+      if (this.popupButton && this.closeButton) {
+          this.popupButton.addEventListener("click", () => this.togglePopUp());
+          this.closeButton.addEventListener("click", () => this.togglePopUp());
+      }
 
       //ascunde pop up la incarcare
       this.closePopUp();
 
       //validare formular
       const contactForm = document.getElementById("contactForm");
-      contactForm.addEventListener("submit", (event) => this.validateForm(event));
+      if (contactForm) {
+          contactForm.addEventListener("submit", (event) => this.validateForm(event));
+      }
   }
 
   togglePopUp() {
@@ -84,8 +87,11 @@ class PopUp {
   }
 
   closePopUp() {
-      this.popup.style.display = "none";
-  }
+    if (this.popup) {
+        this.popup.style.display = "none";
+    }
+}
+
 
   validateForm(event) {
       const nume = document.getElementById("nume").value;
@@ -109,5 +115,8 @@ class PopUp {
       }
   }
 }
+
 // Initializează pop-up-ul
-const popUp = new PopUp();
+document.addEventListener('DOMContentLoaded', function() {
+  const popUp = new PopUp();
+});
